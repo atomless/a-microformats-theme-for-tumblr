@@ -19,6 +19,6 @@ is covered by the instructions below.
 
 INSTRUCTIONS:
 
-1. Replace "disqusforumname" with your own Disqus forum name in line 522 and 536
+1. Replace "microformats-theme-for-tumblr" with your own Disqus forum name in line 627 and 641
 
 2. Paste the theme html code to your Tumblr log (as a custom theme in customization)
