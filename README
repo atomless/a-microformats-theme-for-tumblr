@@ -1,0 +1,24 @@
+A Tumblr.com Theme by James Tindall
+http://jamestindall.info/
+
+Version 1.0, Released December 2008
+Release notes: http://blog.jamestindall.info/search/tumblr
+
+LICENSE:
+This work is licensed under the Creative Commons Attribution-Share Alike 3.0 Unported License. To view a copy of this 
+license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, 
+Suite 300, San Francisco, California, 94105, USA.
+
+SOURCES:
+http://github.com/atomless/a-microformats-theme-for-tumblr/tree/master/
+
+WHAT YOU NEED:
+- An account with tumblr.com (this is a theme for tumblr after all)
+- An account with Disqus.com. Set up a new site there and note down the short name. Don't worry about integration - this 
+is covered by the instructions below.
+
+INSTRUCTIONS:
+
+1. Replace "disqusforumname" with your own Disqus forum name in line 522 and 536
+
+2. Paste the theme html code to your Tumblr log (as a custom theme in customization)
