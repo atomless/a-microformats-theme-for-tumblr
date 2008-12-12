@@ -1,0 +1,696 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="content-language" content="en" />
+
+	<meta name="author" content="James Tindall" />
+	<meta http-equiv="Reply-to" content="your@email.com" />
+
+	<meta name="description" content="Tumblr Microformats theme by James Tindall" />
+	<meta name="keywords" content="Design Web CSS Template Theme UI XHTML Opensource" />
+
+	<title>{Title} {block:PostSummary}- {PostSummary} {/block:PostSummary}</title>
+
+	<link rel="shortcut icon" href="{Favicon}" />
+
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}" />
+
+	<!-- iPhone -->
+	<meta name="viewport" content="width=700" />
+	<link rel="apple-touch-icon" href="http://jamestindall.info/assets/images/apple-touch-icon.png" />
+
+	<style type="text/css" media="screen">
+
+		body
+		{
+		background:#eee;/*only visible in the footer*/
+		color:#555;
+		font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: 16pt;
+		margin: 0;
+		padding: 0;
+		min-width: 485px;
+		overflow-x:hidden;
+		overflow-y:scroll;
+		/* For improved consistency between browser and iphone positioning */
+		-webkit-text-size-adjust:none;
+		}
+
+		a img
+		{
+		border:0;
+		}
+
+		.clear
+		{
+		clear:both;
+		}
+
+		.hidden
+		{
+		display:none;
+		visibility:hidden;
+		width:0;
+		height:0;
+		padding:0;
+		margin:0;
+		border:0;
+		}
+
+		/* MAIN LAYOUT */
+
+		#header
+		{
+		border-bottom:1px solid #ccc;
+		width:100%;
+		margin:0;
+		background:#fff;
+		}
+
+		#content
+		{
+		background:#fff;
+		border-top:2px solid #f8f8f8;
+		border-bottom:1px solid #ccc;
+		}
+
+		.wrap
+		{
+		min-width:320px;
+		max-width:880px;
+		margin:0 auto;
+		padding:0 10px 0 155px;
+		color:#000;
+		overflow:visible;
+		}
+
+		#main
+		{
+		min-width:320px;
+		max-width:780px;
+		}
+
+		/* FOOTER -----------------*/
+
+		#footer
+		{
+		font-size:0.6em;
+		border-top:2px solid #eee;
+		}
+
+		#footer .legals
+		{
+		max-width:780px;
+		color:#999;
+		padding:2em 0;
+		}
+
+		#footer .tumblr
+		{
+		color:#aaa;
+		padding:1em 0;
+		max-width:780px;
+		}
+
+		/* SITE NAV --------------------*/
+
+		#sitenav
+		{
+		max-width:780px;
+		padding:.8em 0;
+		margin:0;
+		}
+
+		#theme-title img
+		{
+		vertical-align:middle;
+		}
+
+		#sitenav a
+		{
+		margin-right:2em;
+		text-decoration:none;
+		}
+
+		#sitenav a:link,
+		#sitenav a:visited
+		{
+		color:#000;
+		}
+
+		#sitenav a:focus,
+		#sitenav a:hover,
+		#sitenav a:active
+		{
+		color:#75ac0d;
+		}
+
+		/* CHRONOLOGY -------------*/
+
+		a.date
+		{
+		display:block;
+		position:absolute;
+		width:112px;
+		top:2.7em;
+		left:-155px;
+		padding:2em 30px 2em 10px;
+		white-space:nowrap;
+		font-size:.5em;
+		text-align:right;
+		text-decoration: none;
+		}
+
+		a.date:hover,
+		#pagination a:hover
+		{
+		text-decoration:underline;
+		}
+
+		abbr,
+		address
+		{
+		border:0;
+		}
+
+		/* LINKS ------------------*/
+
+		a:link
+		{
+		color:#75ac0d;
+		}
+		a:visited
+		{
+		color:#94cc01;
+		}
+		a:focus,
+		a:hover,
+		a:active
+		{
+		color:#baee24;
+		}
+
+		/* PAGINATION --------------*/
+
+		#pagination
+		{
+		float:left;
+		margin-left:-145px;
+		font-size:0.6em;
+		overflow:hidden;
+		width:112px;
+		text-align:right;
+		white-space:nowrap;
+		}
+
+		#pagination a
+		{
+		padding:3.85em 0 1em 0;
+		text-decoration:none;
+		}
+
+		#pagination a.next
+		{
+		display:inline;
+		float:right;
+		clear:none;
+		}
+
+		#pagination a.previous
+		{
+		display:inline;
+		float:left;
+		clear:none;
+		}
+
+		/* BLOGINFO -----------------*/
+
+		#bloginfo
+		{
+		font-size:0.7em;
+		padding:2em 0 0 0;
+		}
+
+		h3.blog-title
+		{
+		font-size:1.5em;
+		letter-spacing:-0.03em;
+		padding:0;
+		margin:.5em 0 0 0;
+		}
+
+		fieldset
+		{
+		border:0;
+		padding:0;
+		margin:0;
+		}
+
+		#searchform
+		{
+		padding:2em 0 4em 0;
+		margin:0;
+		font-size:1.1em;
+		}
+
+		#searchform button
+		{
+		font-size:0.9em;
+		padding:0.2em 0.5em;
+		vertical-align:middle;
+		}
+
+		#searchform INPUT[type="text"]
+		{
+		padding:.35em;
+		background:#fefefe;
+		vertical-align:middle;
+		}
+
+		#searchform INPUT[type="text"]:focus
+		{
+		color:#75ac0d;
+		}
+
+		a.current,
+		#sitenav a.current:hover,
+		a.feed
+		{
+		color:#000;
+		text-decoration:none;
+		}
+
+		a.feed img
+		{
+		border:0;
+		}
+
+		/* HFEED (POSTS) ------------*/
+
+		.hfeed
+		{
+		padding:0;
+		margin:0;
+		}
+
+		.hentry
+		{
+		position:relative;
+		margin:0;
+		padding:0;
+		border-bottom:1px solid #ccc;
+		}
+
+		.entry-title
+		{
+		font-size:2em;
+		line-height:1.1em;
+		letter-spacing:-0.05em;
+		margin:0;
+		padding:.55em 0 .5em 0;
+		}
+
+		.entry-title a
+		{
+		text-decoration:none;
+		}
+
+		.entry-title a:link,
+		.entry-title a:visited
+		{
+		color:#000;
+		}
+
+		.entry-title a:focus,
+		.entry-title a:hover,
+		.entry-title a:active
+		{
+		color:#75ac0d;
+		}
+
+		h1.tagged-with,
+		h1.posts-on-this-day,
+		h1#searchresultcount
+		{
+		padding:.5em 0;
+		margin:0;
+		font-size:.8em;
+		font-weight:normal;
+		border-bottom:1px solid #ccc;
+		}
+
+		.tagged-with .tag,
+		#searchresultcount .query,
+		.posts-on-this-day .date
+		{
+		color:#75ac0d;
+		}
+
+		.entry-content
+		{
+		max-width:460px;
+		margin:0 0 2em 0;
+		padding:0;
+		line-height:1.5em;
+		font-size:0.8em;
+		font-family:Helvetica,Arial,sans-serif;
+		font-weight:lighter;
+		}
+
+		.entry-content p
+		{
+		margin:0 0 1em 0;
+		}
+
+		.entry-content img
+		{
+		border:5px solid #ddd;
+		}
+
+		.entry-info
+		{
+		font-family:Helvetica,Arial,sans-serif;
+		font-size:0.7em;
+		padding:0 0 1em 0;
+		}
+
+		.tags
+		{
+		list-style:none;
+		margin:0;
+		padding:0;
+		}
+
+		.entry-info .tags dt,
+		.tags dd
+		{
+		display:inline;
+		margin:0;
+		padding:0;
+		}
+
+		.comments
+		{
+		float:right;
+		}
+
+		blockquote
+		{
+		border-left:3px solid #ccc;
+		padding:0 0 0 1em;
+		margin:0;
+		}
+
+		.chat ul
+		{
+		list-style-image:url(http://jamestindall.info/assets/images/comment.gif);
+		list-style-type:square;
+		}
+
+		.chat li
+		{
+		border-bottom:1px dashed #eee;
+		padding:.3em;
+		}
+
+		.chat li:last-child
+		{
+		border-bottom:0;
+		}
+
+		.chat li .label
+		{
+		font-weight:bold;
+		}
+
+		.chat li.even
+		{
+		background-color:#fafafa;
+		}
+
+		/* DISQUS ------------*/
+
+		#disqus_thread
+		{
+		padding:.9em 0 2em 0;
+		border-bottom:1px solid #ccc;
+		}
+
+		{CustomCSS}
+	</style>
+
+	<script type="text/javascript">var disqus_iframe_css = "http://jamestindall.info/assets/css/disqus-form.css";</script>
+
+</head>
+
+<body>
+
+	<div id="header">
+
+		<div class="wrap">
+
+			<div id="sitenav">
+
+				<a href="http://microformats.tumblr.com/" id="theme-title"><img src="http://jamestindall.info/assets/images/microformats-logo.gif" alt="microformats" /> A Microformats Theme for Tumblr</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="content">
+
+		<div class="wrap">
+
+			<div id="main">
+
+				{block:SearchPage}
+				<h1 id="searchresultcount">Your search for <span class="query">{SearchQuery}</span> returned {SearchResultCount} result(s).</h1>
+				{/block:SearchPage}
+
+				{block:TagPage}
+				<h1 class="tagged-with">posts tagged with <span class="tag">{Tag}</span></h1>
+				{/block:TagPage}
+
+				{block:DayPage}
+				<h1 class="posts-on-this-day">posts on the <span class="date">{DayOfMonth}{DayOfMonthSuffix} of {Month} {Year}</span></h1>
+				{/block:DayPage}
+
+				<div class="hfeed">
+				{block:Posts}
+
+		{block:Text}<div class="text hentry">{/block:Text}
+		{block:Link}<div class="link hentry">{/block:Link}
+	   {block:Photo}<div class="photo hentry">{/block:Photo}
+		{block:Chat}<div class="chat hentry">{/block:Chat}
+	   {block:Quote}<div class="quote hentry">{/block:Quote}
+	   {block:Audio}<div class="audio hentry">{/block:Audio}
+	   {block:Video}<div class="video hentry">{/block:Video}
+					{block:NewDayDate}
+						<a class="date" href="/day/{Year}/{MonthNumber}/{DayOfMonth}" title="posts on this day"><span class="published updated" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24Hour}:{Minutes}:{Seconds}-00:00"></span>{Year} {ShortMonth} {DayOfMonth}{DayOfMonthSuffix} {12HourWithZero}:{Minutes}{AmPm}</a>
+					{/block:NewDayDate}
+					{block:SameDayDate}
+						<a class="date" href="/day/{Year}/{MonthNumber}/{DayOfMonth}" title="posts on this day"><span class="published updated" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24Hour}:{Minutes}:{Seconds}-00:00"></span>{12HourWithZero}:{Minutes}{AmPm}</a>
+					{/block:SameDayDate}
+					{block:Text}
+						{block:Title}
+						{block:IndexPage}<h2 class="entry-title">{/block:IndexPage}
+						{block:PermalinkPage}<h1 class="entry-title">{/block:PermalinkPage}
+						<a href="{Permalink}" rel="bookmark" title="permanent link to this post">{Title}</a>
+						{block:IndexPage}</h2>{/block:IndexPage}
+						{block:PermalinkPage}</h1>{/block:PermalinkPage}
+						{/block:Title}
+						<div class="entry-content">{Body}</div>
+					{/block:Text}
+
+					{block:Link}
+						{block:IndexPage}<h2 class="entry-title">{/block:IndexPage}
+						{block:PermalinkPage}<h1 class="entry-title">{/block:PermalinkPage}
+						<a href="{URL}" class="link" title="permanent link to this post" {Target}>{Name}</a>
+						{block:IndexPage}</h2>{/block:IndexPage}
+						{block:PermalinkPage}</h1>{/block:PermalinkPage}
+						{block:Description}
+						<div class="entry-content description">{Description}</div>
+						{/block:Description}
+					{/block:Link}
+
+					{block:Photo}
+						{block:Caption}
+						{block:IndexPage}<h2 class="entry-title caption">{/block:IndexPage}
+						{block:PermalinkPage}<h1 class="entry-title caption">{/block:PermalinkPage}
+						{Caption}
+						{block:IndexPage}</h2>{/block:IndexPage}
+						{block:PermalinkPage}</h1>{/block:PermalinkPage}
+						{/block:Caption}
+						<div class="entry-content"><a href="{Permalink}" rel="bookmark" title="permanent link to this post"><img src="{PhotoURL-500}" alt="{PhotoAlt}" /></a></div>
+					{/block:Photo}
+
+					{block:Quote}
+						{block:IndexPage}<h2 class="entry-title">{/block:IndexPage}
+						{block:PermalinkPage}<h1 class="entry-title">{/block:PermalinkPage}
+						<a href="{Permalink}" rel="bookmark" title="permanent link to this post">"{Quote}"</a>
+						{block:IndexPage}</h2>{/block:IndexPage}
+						{block:PermalinkPage}</h1>{/block:PermalinkPage}
+						{block:Source}
+						<div class="entry-content quote-source">{Source}</div>
+						{/block:Source}
+					{/block:Quote}
+
+					{block:Chat}
+						{block:Title}
+						{block:IndexPage}<h2 class="entry-title">{/block:IndexPage}
+						{block:PermalinkPage}<h1 class="entry-title">{/block:PermalinkPage}
+						<a href="{Permalink}" rel="bookmark" title="permanent link to this post">{Title}</a>
+						{block:IndexPage}</h2>{/block:IndexPage}
+						{block:PermalinkPage}</h1>{/block:PermalinkPage}
+						{/block:Title}
+						<ul class="entry-content chat">
+							{block:Lines}
+							<li class="{Alt} user_{UserNumber}">
+								{block:Label}
+								<span class="label">{Label}</span>
+								{/block:Label}
+								{Line}
+							</li>
+							{/block:Lines}
+						</ul>
+					{/block:Chat}
+
+					{block:Audio}
+						{block:Caption}
+						{block:IndexPage}<h2 class="entry-title caption">{/block:IndexPage}
+						{block:PermalinkPage}<h1 class="entry-title caption">{/block:PermalinkPage}
+						<a href="{Permalink}" rel="bookmark" title="permanent link to this post">{Caption}</a>
+						{block:IndexPage}</h2>{/block:IndexPage}
+						{block:PermalinkPage}</h1>{/block:PermalinkPage}
+						{/block:Caption}
+						<div class="entry-content">{AudioPlayerBlack}</div>
+					{/block:Audio}
+
+					{block:Video}
+						{block:Caption}
+						{block:IndexPage}<h2 class="entry-title caption">{/block:IndexPage}
+						{block:PermalinkPage}<h1 class="entry-title caption">{/block:PermalinkPage}
+						<a href="{Permalink}" rel="bookmark" title="permanent link to this post">{Caption}</a>
+						{block:IndexPage}</h2>{/block:IndexPage}
+						{block:PermalinkPage}</h1>{/block:PermalinkPage}
+						{/block:Caption}
+						<div class="entry-content">{Video-400}</div>
+					{/block:Video}
+						<div class="entry-info">
+							{block:IndexPage}
+							<span class="comments"><a href="{Permalink}#disqus_thread" title="view comments">Comments</a></span>
+							{/block:IndexPage}
+							<dl class="tags">
+								<dt>tags</dt>
+								{block:Tags}
+								<dd><a href="{TagURL}" rel="tag" title="tagged with {Tag}">{Tag}</a></dd>
+								{/block:Tags}
+							</dl>
+
+							<address class="vcard author hidden"><a class="url fn" href="http://jamestindall.info/">James Tindall</a></address>
+
+						</div><!-- end entry info -->
+
+					</div><!-- end hentry -->
+				{/block:Posts}
+				</div><!-- end hfeed -->
+
+				<div id="pagination">
+					{block:NextPage}
+					<a href="{NextPage}" class="previous">&#171; older</a>
+					{/block:NextPage}
+
+					{block:PreviousPage}
+					<a href="{PreviousPage}" class="next">newer &#187;</a>
+					{/block:PreviousPage}
+
+					{block:DayPagination}
+					{block:PreviousDayPage}
+					<a href="{PreviousDayPage}" class="previous">&#171; older</a>
+					{/block:PreviousDayPage}
+					{block:NextDayPage}
+					<a href="{NextDayPage}" class="next">newer &#187;</a>
+					{/block:NextDayPage}
+					{/block:DayPagination}
+				</div>
+
+				<!-- DISQUS -->
+			{block:Permalink}
+				<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+
+				<div id="disqus_thread"></div>
+
+				<script type="text/javascript" src="http://disqus.com/forums/microformats-theme-for-tumblr/embed.js"></script>
+
+			{/block:Permalink}
+
+				<script type="text/javascript">
+					//<![CDATA[
+					(function() {
+							var links = document.getElementsByTagName('a');
+							var query = '?';
+							for(var i = 0; i < links.length; i++) {
+								if(links[i].href.indexOf('#disqus_thread') >= 0) {
+									query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+								}
+							}
+							document.write('<script type="text/javascript" src="http://disqus.com/forums/microformats-theme-for-tumblr/get_num_replies.js' + query + '"></' + 'script>');
+						})();
+					//]]>
+				</script>
+				<!-- End DISQUS block -->
+
+				<div id="bloginfo">
+
+					<h3 class="blog-title"><a href="http://www.addthis.com/feed.php?pub=atomless&amp;h1={RSS}" class="feed" title="subscribe to {Title}">{Title} <img src="http://jamestindall.info/assets/images/rss.png" alt="rss" /></a></h3>
+
+					<div class="vcard author">
+					{block:Description}
+					<span id="description">{Description}</span>
+					{/block:Description}
+					by <a class="url uid fn" rel="me" href="http://jamestindall.info">James Tindall</a><img class="photo" src="{PortraitURL-30}" alt="my avatar" />
+					</div>
+
+					<form id="searchform" action="/search" method="get">
+
+						<fieldset>
+
+							<input type="text" name="q" value="{SearchQuery}" />
+
+							<button value="Search" type="submit">Search</button>
+
+						</fieldset>
+
+					</form>
+
+				</div><!-- end of blog info -->
+
+			</div><!-- end of main -->
+
+		</div><!-- end of wrap -->
+
+	</div><!-- end of content -->
+
+	<div id="footer">
+
+		<div class="wrap">
+
+			<div class="legals">
+
+				<div class="license">This <span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dc:title" rel="dc:type"><a xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://microformats.tumblr.com/" rel="dc:source">theme</a></span> for Tumblr by <a xmlns:cc="http://creativecommons.org/ns#" href="http://jamestindall.info/" property="cc:attributionName" rel="cc:attributionURL">James Tindall</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0">Creative Commons Attribution-Non-Commercial-Share Alike 3.0 License</a>.</div>
+
+				<div class="tumblr">powered by <a href="http://tumblr.com/">Tumblr</a></div>
+
+			</div>
+
+		</div>
+
+	</div><!-- end footer -->
+
+</body>
+
+</html>
