@@ -13,12 +13,12 @@ SOURCES:
 http://github.com/atomless/a-microformats-theme-for-tumblr/tree/master/
 
 WHAT YOU NEED:
-- An account with tumblr.com (this is a theme for tumblr after all)
+- An account with tumblr.com
 - An account with Disqus.com. Set up a new site there and note down the short name. Don't worry about integration - this 
 is covered by the instructions below.
 
 INSTRUCTIONS:
 
-1. Replace "microformats-theme-for-tumblr" with your own Disqus forum name in line 627 and 641
+1. Replace "microformats-theme-for-tumblr" with your own Disqus short name in line 627 and 641
 
 2. Paste the theme html code to your Tumblr log (as a custom theme in customization)
