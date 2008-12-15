@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
-<head>
+<head profile="http://www.w3.org/2006/03/hcard">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="Content-Style-Type" content="text/css" />
 	<meta http-equiv="content-language" content="en" />
@@ -173,6 +173,7 @@
 		address
 		{
 		border:0;
+		display:inline;
 		}
 
 		/* LINKS ------------------*/
@@ -285,6 +286,11 @@
 		a.feed img
 		{
 		border:0;
+		}
+
+		.photo
+		{
+		margin-left:.5em;
 		}
 
 		/* HFEED (POSTS) ------------*/
@@ -647,13 +653,11 @@
 				<div id="bloginfo">
 
 					<h3 class="blog-title"><a href="http://www.addthis.com/feed.php?pub=atomless&amp;h1={RSS}" class="feed" title="subscribe to {Title}">{Title} <img src="http://jamestindall.info/assets/images/rss.png" alt="rss" /></a></h3>
-
-					<div class="vcard author">
 					{block:Description}
 					<span id="description">{Description}</span>
 					{/block:Description}
-					by <a class="url uid fn" rel="me" href="http://jamestindall.info">James Tindall</a><img class="photo" src="{PortraitURL-30}" alt="my avatar" />
-					</div>
+					by <address class="vcard author"><a class="url uid fn" rel="me" href="http://jamestindall.info">James Tindall</a><img class="photo" src="{PortraitURL-30}" alt="my avatar" />
+					</address>
 
 					<form id="searchform" action="/search" method="get">
 
