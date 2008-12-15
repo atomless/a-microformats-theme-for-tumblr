@@ -406,7 +406,7 @@
 		{
 		border-left:3px solid #ccc;
 		padding:0 0 0 1em;
-		margin:0;
+		margin:0 0 1em 0;
 		}
 
 		.chat ul
@@ -597,7 +597,7 @@
 								{/block:Tags}
 							</dl>
 
-							<address class="vcard author hidden"><a class="url fn uid" href="http://jamestindall.info/">James Tindall</a></address>
+							<address class="vcard author hidden"><a class="url fn nickname uid" id="author-of-post-{PostID}" href="{PostAuthorURL}">{PostAuthorName}</a></address>
 
 						</div><!-- end entry info -->
 
@@ -656,7 +656,7 @@
 					{block:Description}
 					<span id="description">{Description}</span>
 					{/block:Description}
-					by <address class="vcard author"><a class="url uid fn" rel="me" href="http://jamestindall.info">James Tindall</a><img class="photo" src="{PortraitURL-30}" alt="my avatar" />
+					by <address class="vcard author"><a class="url uid fn" id="site-author" rel="me" href="http://jamestindall.info">James Tindall</a><img class="photo" src="{PortraitURL-30}" alt="my avatar" />
 					</address>
 
 					<form id="searchform" action="/search" method="get">
